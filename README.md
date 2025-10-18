@@ -1,7 +1,7 @@
-# 🏫 Attendance Management System (QR-Based)
+Attendance Management System (QR-Based)
 
-## 📘 Overview
-**Attendance Management System** is a Java-based desktop application designed to streamline student attendance tracking using **QR codes**.  
+📘 Overview
+Attendance Management System is a Java-based desktop application designed to streamline student attendance tracking using **QR codes**.  
 The system allows teachers and students to interact through an intuitive GUI — teachers can generate attendance sessions, while students can mark attendance by scanning QR codes. The system also integrates with a relational database for secure record storage and can export attendance data to Excel.
 
 ---

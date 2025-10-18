@@ -32,40 +32,38 @@ The system allows teachers and students to interact through an intuitive GUI —
 
 ## 📂 Project Structure
 
-\`\`\`
 APP_FINAL/
 │
-├── pom.xml                       # Maven project descriptor
+├── pom.xml # Maven project descriptor
 ├── src/
-│   └── main/
-│       └── java/com/attendance/
-│           ├── Main.java         # Entry point of the application
-│           ├── ui/               # All GUI components (Swing-based)
-│           │   ├── LoginFrame.java
-│           │   ├── TeacherDashboardFrame.java
-│           │   └── StudentDashboardFrame.java
-│           ├── model/            # Data models (POJOs)
-│           │   ├── Student.java
-│           │   ├── Teacher.java
-│           │   └── AttendanceRecord.java
-│           ├── db/               # Database interaction classes
-│           │   ├── DatabaseConnection.java
-│           │   ├── StudentDao.java
-│           │   ├── TeacherDao.java
-│           │   └── AttendanceDao.java
-│           └── util/             # Utility classes
-│               ├── QRGenerator.java
-│               ├── QRScanner.java
-│               ├── ExcelExporter.java
-│               └── LocationValidator.java
+│ └── main/
+│ └── java/com/attendance/
+│ ├── Main.java # Entry point of the application
+│ ├── ui/ # All GUI components (Swing-based)
+│ │ ├── LoginFrame.java
+│ │ ├── TeacherDashboardFrame.java
+│ │ └── StudentDashboardFrame.java
+│ ├── model/ # Data models (POJOs)
+│ │ ├── Student.java
+│ │ ├── Teacher.java
+│ │ └── AttendanceRecord.java
+│ ├── db/ # Database interaction classes
+│ │ ├── DatabaseConnection.java
+│ │ ├── StudentDao.java
+│ │ ├── TeacherDao.java
+│ │ └── AttendanceDao.java
+│ └── util/ # Utility classes
+│ ├── QRGenerator.java
+│ ├── QRScanner.java
+│ ├── ExcelExporter.java
+│ └── LocationValidator.java
 │
-├── target/                       # Compiled .class files
-│   ├── classes/
-│   └── generated-sources/
+├── target/ # Compiled .class files
+│ ├── classes/
+│ └── generated-sources/
 │
-├── output/qrcodes/               # Generated QR codes
-└── sql/attendance_system.sql     # Database schema
-\`\`\`
+├── output/qrcodes/ # Generated QR codes
+└── sql/attendance_system.sql # Database schema
 
 ---
 

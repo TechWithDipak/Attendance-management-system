@@ -133,14 +133,3 @@ Teachers can export attendance reports in `.xlsx` format via the dashboard (powe
 4. The app validates and stores attendance in the database.
 
 ---
-
-## 🧾 License
-This project is provided for **educational and academic use**.  
-You may modify or extend it for institutional purposes with proper attribution.
-
----
-
-## 👨‍💻 Author
-Developed by **[Your Name / Team Name]**  
-📧 *youremail@example.com*  
-🗓️ *2025 Edition*

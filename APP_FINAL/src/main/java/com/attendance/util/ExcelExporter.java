@@ -21,7 +21,6 @@ public class ExcelExporter {
             header.createCell(3).setCellValue("Course");
             header.createCell(4).setCellValue("Date");
             header.createCell(5).setCellValue("Status");
-            header.createCell(6).setCellValue("Location");
 
             int rowIdx = 1;
             for (AttendanceRecord r : records) {
@@ -32,10 +31,9 @@ public class ExcelExporter {
                 row.createCell(3).setCellValue(r.getCourse());
                 row.createCell(4).setCellValue(r.getDate().toString());
                 row.createCell(5).setCellValue(r.getStatus());
-                row.createCell(6).setCellValue(r.getLocation());
             }
 
-            for (int i = 0; i <= 6; i++) {
+            for (int i = 0; i <= 5; i++) {
                 sheet.autoSizeColumn(i);
             }
 

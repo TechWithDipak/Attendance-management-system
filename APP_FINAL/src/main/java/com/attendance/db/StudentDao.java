@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StudentDao {
     public Student findByUsernameAndPassword(String username, String password) throws SQLException {
@@ -61,6 +63,27 @@ public class StudentDao {
             }
             return -1;
         }
+
+    public List<Student> findAll() throws SQLException {
+        String sql = "SELECT id, name, roll_no, username, password, latitude, longitude FROM students ORDER BY name";
+        List<Student> list = new ArrayList<>();
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+                list.add(new Student(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("roll_no"),
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getDouble("latitude"),
+                        rs.getDouble("longitude")
+                ));
+            }
+        }
+        return list;
+    }
 }
 
 

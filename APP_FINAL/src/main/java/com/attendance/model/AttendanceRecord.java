@@ -6,6 +6,8 @@ public class AttendanceRecord {
     private int id;
     private int studentId;
     private int teacherId;
+    private String studentName;
+    private String studentRollNo;
     private String course;
     private LocalDate date;
     private String status;
@@ -13,10 +15,12 @@ public class AttendanceRecord {
 
     public AttendanceRecord() {}
 
-    public AttendanceRecord(int id, int studentId, int teacherId, String course, LocalDate date, String status, String location) {
+    public AttendanceRecord(int id, int studentId, int teacherId, String studentName, String studentRollNo, String course, LocalDate date, String status, String location) {
         this.id = id;
         this.studentId = studentId;
         this.teacherId = teacherId;
+        this.studentName = studentName;
+        this.studentRollNo = studentRollNo;
         this.course = course;
         this.date = date;
         this.status = status;
@@ -37,6 +41,10 @@ public class AttendanceRecord {
     public void setStatus(String status) { this.status = status; }
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
+    public String getStudentName() { return studentName; }
+    public void setStudentName(String studentName) { this.studentName = studentName; }
+    public String getStudentRollNo() { return studentRollNo; }
+    public void setStudentRollNo(String studentRollNo) { this.studentRollNo = studentRollNo; }
 }
 
 

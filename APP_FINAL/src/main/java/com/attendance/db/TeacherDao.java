@@ -29,6 +29,20 @@ public class TeacherDao {
         }
         return null;
     }
+
+    public String findNameById(int id) throws SQLException {
+        String sql = "SELECT name FROM teachers WHERE id=?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getString("name");
+                }
+            }
+        }
+        return null;
+    }
 }
 
 
